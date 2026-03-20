@@ -1,4 +1,4 @@
-# 📈 WallStreetV2: Corporate Management & Procedural Generation
+# WallStreetV2
 
 [![Spigot API](https://img.shields.io/badge/Spigot_API-1.20+-orange?style=for-the-badge)]()
 [![WorldEdit](https://img.shields.io/badge/WorldEdit_API-Integrated-blue?style=for-the-badge)]()
@@ -9,7 +9,7 @@ This repository serves as a technical showcase of procedural generation, 3D regi
 
 ---
 
-## 📖 The Concept (What, Why, & How)
+## The Concept (What, Why, & How)
 
 **What is it?**
 WallStreetV2 is an economy and land-management game mode. It shifts standard survival gameplay into a corporate structure, where players build businesses, manage staff access levels, and control land that holds valuable, auto-regenerating resources.
@@ -24,7 +24,7 @@ Standard economy plugins often rely on simple balance sheets, while land claimin
 
 ---
 
-## 🏗️ Core Architecture & Technical Highlights
+## Core Architecture & Technical Highlights
 
 ### 1. Procedural Generation & WorldEdit Integration
 Mine generation hooks directly into the **WorldEdit API** to physically spawn large-scale regions dynamically.
@@ -50,14 +50,14 @@ Utilises a highly segmented, bespoke YAML File I/O system tailored to handle com
 
 ---
 
-## ⚙️ Dependencies
+## Dependencies
 
 To compile and run this plugin, the server environment must be running Spigot/Paper and have the following API plugin installed:
 * **WorldEdit** (For spatial region selections and procedural `RandomPattern` block population)
 
 ---
 
-## 🛠️ Command Router Overview
+## Command Router Overview
 
 The plugin routes interactions through centralised `CommandExecutor` classes (`CompanyCommands` and `WSAdminCommands`), validating custom RBAC permissions before executing logic.
 
