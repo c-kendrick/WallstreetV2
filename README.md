@@ -70,7 +70,6 @@ The plugin routes interactions through centralised `CommandExecutor` classes (`C
 | `/c purchase mine [mine] [company]` | All | Appends a specified mine to a company's asset list within the YAML data. |
 | `/c check` | All | Looks up the current chunk's spatial ID to return the current corporate owner. |
 | `/c show [company]` | All | Reads and broadcasts the public YAML profile (CEO, Founded Date, Status) of a company. |
-| `/c reload` | All | Hot-reloads the core `companies.yml` file. |
 
 ### Employee Management (`/c`)
 | Command | Permission Target | Function |
@@ -80,12 +79,12 @@ The plugin routes interactions through centralised `CommandExecutor` classes (`C
 | `/c trust [player] [company]` | Manager/CEO | Grants a player baseline build/break permissions within company claims. |
 | `/c untrust [player] [company]` | Manager/CEO | Revokes baseline build permissions, downgrading them to freelance employee status. |
 | `/c banish [player] [company]` | Manager/CEO | Explicitly blacklists a player from company premises, blocking all interactions. |
-| `/c unbanish [player] [company]` | Manager/CEO | Removes the blacklist for a player, resetting their status to Unbanished. |
+| `/c unbanish [player] [company]` | Manager/CEO | Removes the blacklist for a player, resetting their status to freelance employee. |
 
 ### System Administration (`/wsa`)
 | Command | Permission Target | Function |
 | :--- | :--- | :--- |
-| `/wsa create mine [name]` | Server OP | Converts a physical WorldEdit selection into spatial coordinates (`min`/`max` vectors), saves it to YAML, and populates default ore percentages. |
-| `/wsa spawn mine [name]` | Server OP | Forces a procedural regeneration of a specific mine using the defined weighted block percentages in `mines.yml`. |
-| `/wsa spawntest` | Server OP | Immediately spawns a test mine (stone, diamond, gold, iron) into the player's current WorldEdit selection. |
-| `/wsa reload [file]` | Server OP | Safely hot-reloads a specific segmented YAML file (`mine`, `claims`, `companies`, `playerstats`, `playernames`) into server memory. |
+| `/wsa create mine [name]` | Server Operator | Converts a physical WorldEdit selection into spatial coordinates (`min`/`max` vectors), saves it to YAML, and populates default ore percentages. |
+| `/wsa spawn mine [name]` | Server Operator | Forces a procedural regeneration of a specific mine using the defined weighted block percentages in `mines.yml`. |
+| `/wsa spawntest` | Server Operator | Immediately spawns a test mine (stone, diamond, gold, iron) into the player's current WorldEdit selection. |
+| `/wsa reload [file]` | Server Operator | Safely hot-reloads a specific segmented YAML file (`mine`, `claims`, `companies`, `playerstats`, `playernames`) into server memory. ||
