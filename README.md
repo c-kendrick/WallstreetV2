@@ -5,7 +5,7 @@
 
 **WallStreetV2** is a custom Java plugin developed for Spigot/Paper server environments. It introduces a comprehensive corporate system to Minecraft, allowing players to found companies, manage employee hierarchies, claim territory, and operate mathematically weighted, regenerating mines.
 
-This repository serves as a technical showcase of procedural generation, 3D region mathematics, event interception, and role-based access control within a multiplayer economy.
+This repository implements procedural generation, 3D region mathematics, event interception, and role-based access control within a multiplayer economy.
 
 ---
 
@@ -39,12 +39,12 @@ Land boundaries and build permissions rely on real-time mathematical calculation
 * **Interactive UI:** Utilises the Adventure API to send interactive, clickable, and hoverable rich-text components upon `PlayerJoinEvent`.
 
 ### 3. Role-Based Access Control (RBAC)
-Internal company management uses a custom-built corporate ranking system to dictate permission levels, demonstrating a clear understanding of both whitelist and blacklist models.
+Internal company management uses a custom-built corporate ranking system to dictate permission levels, utilising both whitelist and blacklist permission models.
 * **Role Tiers:** Programmed a segmented hierarchy (CEO, Manager, Trusted, Untrusted, Banished) saved natively in the plugin's data structures.
 * **Explicit Blacklisting:** Implemented a "Banished" state to actively block specific players from interacting with or entering company properties, overriding standard wilderness permissions.
 
 ### 4. Custom YAML Data Persistence
-Utilises a highly segmented, bespoke YAML File I/O system tailored to handle complex corporate data safely.
+The plugin utilises a segmented YAML File I/O system to handle corporate data safely.
 * **Data Segmentation:** Separates data into distinct files (`companies.yml`, `claims.yml`, `mines.yml`, `playerstats.yml`, `playernames.yml`) to organise application state, chunk ownership, and user metadata efficiently.
 * **Dynamic Loading:** Uses custom class setups to load, save, and safely hot-reload these specific configuration files to maintain data integrity during server operations.
 
